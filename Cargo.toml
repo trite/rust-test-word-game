@@ -14,7 +14,8 @@ bevy = { version = "0.14", default-features = false, features = [
     "png",
     "x11",
     "tonemapping_luts",
-    "default_font"
+    "default_font",
+    "webgl2"
 ] }
 getrandom = { version = "0.3", features = ["wasm_js"] }
 
