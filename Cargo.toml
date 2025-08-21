@@ -16,6 +16,8 @@ bevy = { version = "0.14", default-features = false, features = [
     "tonemapping_luts",
     "default_font"
 ] }
+getrandom = { version = "0.2", features = ["js"] }
 
 [target.wasm32-unknown-unknown.dependencies]
 web-sys = "0.3"
+getrandom = { version = "0.2", features = ["js"] }
