@@ -40,7 +40,7 @@ jobs:
     - name: Build for web
       run: |
         export RUSTFLAGS="--cfg=web_sys_unstable_apis"
-        export CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUSTFLAGS="--cfg=getrandom_wasm_js"
+        export CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUSTFLAGS="--cfg getrandom_backend=\"wasm_js\""
         trunk build --release --public-url "/${GITHUB_REPOSITORY#*/}/"
 
     - name: Setup Pages
