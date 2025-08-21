@@ -44,9 +44,16 @@ The built web assets will be in the `dist/` directory.
 
 The game automatically deploys to GitHub Pages when changes are pushed to the main branch. The GitHub Actions workflow:
 
-1. Builds the game for WebAssembly target
+1. Builds the game for WebAssembly target with intelligent dependency caching
 2. Creates optimized web assets using `trunk`
 3. Deploys to GitHub Pages
+
+### Build Performance
+The CI/CD pipeline uses intelligent caching to significantly reduce build times:
+- **Cold builds** (when dependencies change): ~3-5 minutes
+- **Warm builds** (code-only changes): ~1-2 seconds (99%+ faster!)
+
+See [CACHING.md](CACHING.md) for detailed information about the caching implementation.
 
 ## Technology Stack
 
