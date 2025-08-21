@@ -1,0 +1,5 @@
+[build]
+target = "index.html"
+
+[build.rustflags]
+add = ["--cfg=web_sys_unstable_apis", "--cfg=getrandom_wasm_js"]

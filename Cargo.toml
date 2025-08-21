@@ -1,0 +1,24 @@
+[package]
+name = "rust-test-word-game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { version = "0.14", default-features = false, features = [
+    "bevy_winit",
+    "bevy_render", 
+    "bevy_core_pipeline",
+    "bevy_sprite",
+    "bevy_text",
+    "bevy_ui",
+    "png",
+    "x11",
+    "tonemapping_luts",
+    "default_font"
+] }
+getrandom = { version = "0.3", features = ["wasm_js"] }
+
+[target.wasm32-unknown-unknown.dependencies]
+web-sys = "0.3"
+getrandom = { version = "0.3", features = ["wasm_js"] }
+uuid = { version = "1.0", features = ["js"] }
